@@ -59,7 +59,7 @@ public class Controller implements Initializable {
         rollCountLabel.setText("Rolls: " + 0);
         sumLabel.setText("Sum: " + 0);
         statusLabel.setText("Cleared!");
-        bigRollLabel.setText("");
+        bigRollLabel.setText("\uD83D\uDE0E");
     }
 
     public void sort() {
