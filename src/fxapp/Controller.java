@@ -26,7 +26,6 @@ public class Controller implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        System.out.println("Program was loaded.");
 
         dice.add(new Die(4));
         dice.add(new Die(6));
@@ -79,8 +78,9 @@ public class Controller implements Initializable {
         rollsListView.getSelectionModel().getSelectedItems().addListener((ListChangeListener<Integer>) c -> {
             int sumOfSelected = c.getList().stream().mapToInt(i -> i).sum();
             int sumOfRolls = rolls.stream().mapToInt(i -> i).sum();
-            sumLabel.setText("Sum: " + sumOfRolls + " (" + sumOfSelected + ")");
+
             rollCountLabel.setText("Rolls: " + rolls.size() + " (" + c.getList().size() + ")");
+            sumLabel.setText("Sum: " + sumOfRolls + " (" + sumOfSelected + ")");
         });
     }
 }
