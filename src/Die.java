@@ -1,5 +1,3 @@
-package fxapp;
-
 import java.util.Random;
 
 public class Die extends Random{
